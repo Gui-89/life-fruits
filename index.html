@@ -153,6 +153,49 @@
       overflow: hidden;
       margin-bottom: 3rem;
     }
+
+    /* Menu Mobile */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle i {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+@media (max-width: 428px) {
+  .menu-toggle {
+    display: block;
+    text-align: center;
+  }
+  
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--white);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 99;
+  }
+  
+  nav ul.active {
+    display: flex;
+  }
+  
+  nav a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+}
     
     .hero-content {
       position: relative;
@@ -473,18 +516,35 @@
     const encodedMessage = encodeURIComponent(message); 
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   }
-    </script>  
+
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+  }
+
+  // Fechar o menu ao clicar em um item
+  document.querySelectorAll('nav a').forEach(item => {
+    item.addEventListener('click', () => {
+      const menu = document.getElementById('menu');
+      menu.classList.remove('active');
+    });
+  });  
+  </script>  
+     
   </header>
   
   <nav>
-    <ul>
-      <li><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Início</a></li>
-      <li><a href="#products">Produtos</a></li>
-      <li><a href="#about">Sobre Nós</a></li>
-      <li><a href="#testimonials">Depoimentos</a></li>
-      <li><a href="#contact">Contato</a></li>
-    </ul>
-  </nav>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul id="menu">
+    <li><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Início</a></li>
+    <li><a href="#products">Produtos</a></li>
+    <li><a href="#about">Sobre Nós</a></li>
+    <li><a href="#testimonials">Depoimentos</a></li>
+    <li><a href="#contact">Contato</a></li>
+  </ul>
+</nav>
   
   <div class="container">
     <section id="home" class="hero">
