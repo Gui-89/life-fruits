@@ -25,16 +25,16 @@
 
 
     .opening-hours {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 0.4rem auto 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  color: white;
-  flex-wrap: wrap;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-}
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0.4rem auto 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: white;
+    flex-wrap: wrap;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  }
 
   .opening-hours span {
     display: flex;
@@ -45,10 +45,10 @@
     border-radius: 20px;
   }
 
-.opening-hours i {
+  .opening-hours i {
   font-size: 1rem;
   color: var(--accent);
-}
+  }
 
     body {
       font-family: 'Raleway', sans-serif;
@@ -76,13 +76,15 @@
     
     .logo {
       font-family: 'Montserrat', sans-serif;
-      font-size: 3.5rem;
+      font-size: 3.8rem;
       font-weight: 600;
       color: var(--white);
       letter-spacing: 2px;
       margin-bottom: 1rem;
       text-transform: lowercase;
     }
+
+    
     
     .logo::after {
       content: '•';
@@ -133,11 +135,54 @@
     }
     
     /* Main Container */
-    .container {
+  .container {
       max-width: 1200px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 0 rem;
     }
+
+  .info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  }
+
+  .info-bloco {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  }
+
+  .info-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.6rem;
+  border-radius: 20px;
+  color: #ff6b4d;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  }
+
+  .social-icons {
+  display: flex;
+  gap: 2rem;
+  
+  }
+
+  .social-icons a {
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+  
+  }
+
+  .social-icons a:hover {
+  transform: scale(1.1);
+  }
     
     /* Hero Section */
     .hero {
@@ -154,49 +199,6 @@
       margin-bottom: 3rem;
     }
 
-    /* Menu Mobile */
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.menu-toggle i {
-  font-size: 1.5rem;
-  color: var(--text);
-}
-
-@media (max-width: 428px) {
-  .menu-toggle {
-    display: block;
-    text-align: center;
-  }
-  
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: var(--white);
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 60px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    z-index: 99;
-  }
-  
-  nav ul.active {
-    display: flex;
-  }
-  
-  nav a {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-  }
-}
-    
     .hero-content {
       position: relative;
       z-index: 1;
@@ -298,6 +300,47 @@
       font-size: 1.2rem;
       margin: 0.5rem 0;
     }
+
+    /* Estilos para a seção Sobre Nós */
+.about-section {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: var(--white);
+  margin: 3rem 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.about-section h2 {
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text);
+}
     
     /* Testimonials */
     .social-proof {
@@ -378,13 +421,13 @@
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 2rem;
       margin: 1.5rem 0;
     }
     
     .social-links a {
       color: var(--white);
-      font-size: 1.5rem;
+      font-size: 2rem;
       transition: all 0.3s ease;
     }
     
@@ -411,8 +454,135 @@
     .copyright {
       margin-top: 2rem;
       font-size: 0.9rem;
-      opacity: 0.8;
     }
+
+  .trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.trust-item i {
+  color: var(--accent);
+}  
+
+/* Estilos para o menu flutuante */
+.nav-container {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.floating-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.hamburger-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.hamburger-btn i {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.dropdown-menu {
+  display: none; /* manter oculto por padrão */
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 220px;
+  padding: 1rem 0;
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown-menu.active {
+  display: flex;
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(153, 202, 227, 0.1);
+
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajustes para desktop - esconder o menu flutuante */
+@media (min-width: 769px) {
+  .floating-menu {
+    display: none;
+  }
+  
+  /* Manter o menu normal para desktop */
+  nav ul {
+    display: flex !important;
+  }
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+  nav ul:not(.dropdown-menu) {
+    display: none;
+  }
+  
+  .floating-menu {
+    display: block;
+  }
+}
     
     /* Responsive Adjustments */
     @media (max-width: 768px) {
@@ -496,54 +666,88 @@
           font-size: 3rem;
         }
     }
+
+  .coupon-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+}
+
+.coupon-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  position: relative;
+}
+
+.coupon-code {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 2px dashed var(--accent);
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}  
+.coupon-modal.show {
+  display: flex !important;
+}
   </style>
 </head>
 <body>
   <header>
     <div class="logo">life</div>
     <p class="slogan">Sua saúde começa com a escolha certa de alimentos naturais e nutritivos</p>
-    <div class="opening-hours">
-    <span><i class="fas fa-calendar-alt"></i> Segunda, Quinta e Sábado</span>
-    <span><i class="fas fa-clock"></i> 9h às 17h</span>
+    <div class="info-container">
+  <div class="info-bloco">
+    <span class="info-item">
+      <i class="fas fa-calendar-alt"></i> Segunda, Quinta e Sábado
+    </span>
+    <span class="info-item">
+      <i class="fas fa-clock"></i> 9h às 17h
+    </span>
   </div>
-     <script>
-  function openWhatsApp() {
-    // Número no formato 55DDDNUMERO (sem espaços ou caracteres especiais)
-    const phoneNumber = "556196014660"; 
-    // Mensagem pré-definida (opcional)
-    const message = "Olá life•, gostaria de fazer um pedido!"; 
-    // Codifica a mensagem para URL
-    const encodedMessage = encodeURIComponent(message); 
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-  }
+  <div class="social-icons">
+    <a href="https://www.instagram.com/life.fruitss/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="javascript:void(0);" onclick="openWhatsApp()"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</div>
+  </div>
 
-  function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
-  }
-
-  // Fechar o menu ao clicar em um item
-  document.querySelectorAll('nav a').forEach(item => {
-    item.addEventListener('click', () => {
-      const menu = document.getElementById('menu');
-      menu.classList.remove('active');
-    });
-  });  
-  </script>  
      
   </header>
   
-  <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
+ <nav>
+  <div class="nav-container">
+    <div class="floating-menu">
+      <button class="hamburger-btn" onclick="toggleMenu(event)">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#products">Produtos</a></li>
+        <li><a href="#about">Sobre Nós</a></li>
+        <li><a href="#testimonials">Depoimentos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </div>
   </div>
-  <ul id="menu">
-    <li><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Início</a></li>
-    <li><a href="#products">Produtos</a></li>
-    <li><a href="#about">Sobre Nós</a></li>
-    <li><a href="#testimonials">Depoimentos</a></li>
-    <li><a href="#contact">Contato</a></li>
-  </ul>
 </nav>
   
   <div class="container">
@@ -610,11 +814,14 @@
       </div>
     </section>
     
-    <section id="about" style="margin: 4rem 0; text-align: center;">
-      <h2 style="color: var(--primary-dark); margin-bottom: 1rem;">Sobre a life•</h2>
-      <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">Nossa missão é levar até você os benefícios de uma alimentação natural e saudável. Trabalhamos diretamente com pequenos produtores para oferecer frutas frescas e produtos de qualidade, com todo o sabor e nutrientes que a natureza oferece.</p>
-    </section>
+    <section id="about" class="about-section">
+  <div class="container">
+    <h2>Sobre a life•</h2>
+    <div class="about-content">
+      <p>Nossa missão é levar até você os benefícios de uma alimentação natural e saudável. Trabalhamos diretamente com pequenos produtores para oferecer frutas frescas e produtos de qualidade, com todo o sabor e nutrientes que a natureza oferece.</p>
+    </div>
   </div>
+</section>
   
   <section id="testimonials" class="social-proof">
     <div class="container">
@@ -659,7 +866,21 @@
   <footer id="contact">
     <div class="container">
       <h3 class="logo">life</h3>
-      <p>Alimentando sua vida com o que a natureza tem de melhor</p>
+
+    <div class="trust-badges">
+    <div class="trust-item">
+    <i class="fas fa-shield-alt"></i>
+    <span>Produtos 100% Naturais</span>
+    </div>
+    <div class="trust-item">
+    <i class="fas fa-truck"></i>
+    <span>Entrega Rápida</span>
+    </div>
+    <div class="trust-item">
+    <i class="fas fa-credit-card"></i>
+    <span>Pagamento Seguro</span>
+    </div>
+    </div>  
       
       <div class="social-links">
         <a href="https://www.instagram.com/life.fruitss/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -680,5 +901,122 @@
     </a>. Todos direitos reservados.
     </div>
   </footer>
+<script>
+  // Função do WhatsApp 
+  function openWhatsApp() {
+    const phoneNumber = "556196014660";
+    const message = "Olá life•, gostaria de fazer um pedido!";
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+  }
+
+  // Variáveis globais para controle do menu
+  const menu = document.querySelector('.dropdown-menu');
+  const hamburgerBtn = document.querySelector('.hamburger-btn');
+  const SCROLL_DELAY = 150;
+
+  // Função para alternar o menu
+  function toggleMenu(event) {
+    event.stopPropagation();
+    menu.classList.toggle('active');
+  }
+
+  // Função para fechar o menu
+  function closeMenu() {
+    menu.classList.remove('active');
+  }
+
+  // Função de scroll suave
+  function smoothScroll(sectionId, event) {
+    event.preventDefault();
+    closeMenu();
+    
+    setTimeout(() => {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, SCROLL_DELAY);
+  }
+
+  // Fechar menu ao clicar fora
+  document.addEventListener('click', function(event) {
+    if (menu.classList.contains('active') && 
+        !event.target.closest('.dropdown-menu') && 
+        !event.target.closest('.hamburger-btn')) {
+      closeMenu();
+    }
+  });
+
+  // Configurar eventos dos links do menu
+  document.querySelectorAll('.dropdown-menu a').forEach(item => {
+  item.addEventListener('click', function (e) {
+    const sectionId = this.getAttribute('href').substring(1);
+    
+    if (sectionId === 'home') {
+      e.preventDefault();
+      closeMenu();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      smoothScroll(sectionId, e);
+    }
+  });
+});
+</script> 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Mostrar popup após 5 segundos
+    setTimeout(() => {
+      document.getElementById('couponModal').style.display = 'flex';
+    }, 5000);
+
+    // Copiar o cupom
+    function copyCoupon() {
+      navigator.clipboard.writeText("SAUDE15");
+      alert("Cupom copiado! Use no checkout.");
+    }
+    window.copyCoupon = copyCoupon; // necessário se chamada via HTML inline
+
+    // Fechar ao clicar no X
+    const closeButton = document.querySelector('.close-modal');
+    if (closeButton) {
+      closeButton.addEventListener('click', function () {
+        document.getElementById('couponModal').style.display = 'none';
+      });
+    }
+
+    // Fechar ao clicar fora da caixa de conteúdo
+    const modal = document.getElementById('couponModal');
+    if (modal) {
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  });
+</script>
+
+
+
+
+
+<div class="coupon-modal" id="couponModal">
+  <div class="coupon-content">
+    <span class="close-modal">&times;</span>
+    <h3>GANHE 15% DE DESCONTO!</h3>
+    <p>Informe o cupon ao realizar o seu 1° pedido</p>
+    <div class="coupon-code">LIFE15</div>
+    <p>Válido por 24 horas</p>
+    <button class="btn" onclick="copyCoupon()">COPIAR CUPOM</button>
+  </div>
+</div>
+
 </body>
 </html>
